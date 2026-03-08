@@ -1,0 +1,39 @@
+package com.debora.inventory;
+
+import java.io.IOException;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class App extends Application {
+
+    private static Scene scene;
+
+    @Override
+    public void start(Stage stage) throws IOException {
+        scene = new Scene(loadFXML("primary"), 640, 480);
+
+        stage.setTitle("Inventory System");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    static void setRoot(String fxml) throws IOException {
+        scene.setRoot(loadFXML(fxml));
+    }
+
+    private static Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        return fxmlLoader.load();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+
+    //ADD: price * quantity column, search bar, save and load table to/from file, automatic color acording to quantity, total items and total value, sort buttons.
+
+}
