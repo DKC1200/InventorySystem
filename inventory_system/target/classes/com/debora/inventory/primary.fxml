@@ -26,11 +26,15 @@
             <TableColumn fx:id="nameColumn" text="Name"/>
             <TableColumn fx:id="priceColumn" text="Price"/>
             <TableColumn fx:id="quantityColumn" text="Quantity"/>
+            <TableColumn fx:id="totalValueColumn" text="Total Value"/>
             <TableColumn fx:id="addColumn" text="+"/>
             <TableColumn fx:id="removeColumn" text="-"/>
             <TableColumn fx:id="deleteColumn" text="Delete"/>
          </columns>
       </TableView>
+      
+      <Label fx:id="totalValueLabel" text="Total Inventory Value: $0.00" />
+      <Label fx:id="totalItemsLabel" text="Total Items: 0" />
 
    </children>
 

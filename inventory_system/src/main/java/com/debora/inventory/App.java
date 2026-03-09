@@ -14,7 +14,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        scene = new Scene(loadFXML("primary"), 1280, 720);
 
         stage.setTitle("Inventory System");
         stage.setScene(scene);
@@ -33,7 +33,5 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
-    //ADD: price * quantity column, search bar, save and load table to/from file, automatic color acording to quantity, total items and total value, sort buttons.
 
 }
