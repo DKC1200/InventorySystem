@@ -14,6 +14,8 @@ The system focuses on maintainability and extensibility, allowing additional fun
 
 This project is currently under development.
 
+<img width="602" height="673" alt="InventorySystem" src="https://github.com/user-attachments/assets/906d1483-54ea-4e70-97c9-2c0f4e501895" />
+
 ---
 
 # Key Features
