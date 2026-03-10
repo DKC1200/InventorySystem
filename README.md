@@ -1,58 +1,86 @@
 # Inventory System
 
-A desktop **inventory management system built with Java and JavaFX** that provides a graphical interface for managing and tracking inventory items. The application enables users to create, update and organize inventory records through a structured and user-friendly interface.
-Although this project is still under development, it demonstrates a modular architecture using object-oriented design principles combined with a responsive JavaFX interface suitable for desktop-based management tools.
+A simple **desktop inventory management system built with JavaFX**.  
+This application provides an intuitive interface for managing items, tracking stock, and organizing inventory efficiently.
+It is still under development.
+
+The application enables users to create, update and organize inventory records through a structured and user-friendly interface. Although this project is still under development, it demonstrates a modular architecture using object-oriented design principles combined with a responsive JavaFX interface suitable for desktop-based management tools.
 
 ---
 
-# Overview
+## Features
 
-The Inventory System is designed to simplify inventory tracking and item management.  
-It provides a clear interface for viewing and modifying inventory data while maintaining a separation between the application logic and the graphical interface.
+- 📦 **Item Management**  
+  - Add, edit, and remove inventory items  
+  - Maintain structured item data including name, quantity, and category
 
-The system focuses on maintainability and extensibility, allowing additional functionality such as persistent storage or advanced search capabilities to be integrated in future versions.
+- 🔍 **Inventory Overview**  
+  - View all items in a structured table  
+  - Sort and filter items for quick access
 
-This project is currently under development.
+- 🖥 **JavaFX User Interface**  
+  - Clean, responsive desktop GUI  
+  - Interactive controls for fast inventory management
 
-<img width="602" height="673" alt="InventorySystem" src="https://github.com/user-attachments/assets/906d1483-54ea-4e70-97c9-2c0f4e501895" />
+- 🗂 **Modular Architecture**  
+  - Clear separation between UI, models, and business logic  
+  - Easy to extend with new features
 
----
-
-# Key Features
-
-- Create and manage inventory items
-- Display items through a graphical user interface
-- Edit existing item records
-- Remove items from the inventory
-- Track item quantities
-- Modular Java application structure
+<img width="696" height="725" alt="Inventory" src="https://github.com/user-attachments/assets/70d66a7b-7e60-4505-bcc9-ea3f8daccdbe" />
 
 ---
 
-# System Architecture
+## Technologies Used
 
-The project follows a structured layout separating responsibilities between application logic, data models, and user interface components.
-
-```
-src/
- ├── application      # Application entry point
- ├── controllers      # UI controllers and interaction logic
- ├── models           # Inventory and item data models
- └── views            # JavaFX UI components
-```
-
-This separation improves maintainability and supports future system expansion.
+- **Java 17+**  
+- **JavaFX**  
+- **FXML** for UI layout  
+- **Gradle or Maven** (optional)
 
 ---
 
-# Future Enhancements
+## Project Structure
+InventorySystem
+│
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── inventorysystem
+│   │   │       ├── Main.java
+│   │   │       ├── controller
+│   │   │       ├── model
+│   │   │       └── service
+│   │   │
+│   │   └── resources
+│   │       └── fxml
+│   │
+├── README.md
+└── LICENSE
 
-Potential improvements include:
+---
 
-- Persistent data storage (SQLite or another database)
-- Inventory search and filtering
-- Item categorization
-- Data import/export (CSV or JSON)
-- total price column
-- automatic color acording to quantity
-- total items and total value
+## Usage
+
+- Launch the application
+- Add new items to the inventory
+- Edit or remove existing items
+- Sort and filter inventory for fast access
+
+---
+
+## Future Improvements
+
+Planned enhancements:
+
+- Database integration (SQLite / PostgreSQL)
+- Inventory categorization and tagging
+- Persistent storage and backups
+- Export inventory to CSV or Excel
+- User authentication and access control
+- Automatic color acording to quantity
+
+---
+
+## License
+
+This project is licensed under the MIT License.
