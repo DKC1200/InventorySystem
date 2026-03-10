@@ -16,6 +16,16 @@ public class PrimaryController {
     ObservableList<Item> items = FXCollections.observableArrayList();
     
     @FXML
+    private TextField nameField;
+    @FXML
+    private TextField priceField;
+    @FXML
+    private TextField quantityField;
+
+    @FXML
+    private TextField searchField;
+    
+    @FXML
     private TableView<Item> table;
     @FXML
     private TableColumn<Item, String> nameColumn;
@@ -31,13 +41,6 @@ public class PrimaryController {
     private TableColumn<Item,Void> removeColumn;
     @FXML
     private TableColumn<Item,Void> deleteColumn;
-    
-    @FXML
-    private TextField nameField;
-    @FXML
-    private TextField priceField;
-    @FXML
-    private TextField quantityField;
 
     @FXML
     private Label totalValueLabel;
@@ -151,5 +154,21 @@ public class PrimaryController {
         nameField.clear();
         quantityField.clear();
         priceField.clear();
+    }
+
+    @FXML
+    private void searchItems() {
+        String searchText = searchField.getText().toLowerCase();
+        if (searchText.isEmpty()) {
+            table.setItems(items);
+            return;
+        }
+        ObservableList<Item> filteredItems = FXCollections.observableArrayList();
+        for (Item item : items) {
+            if (item.getName().toLowerCase().contains(searchText)) {
+                filteredItems.add(item);
+            }
+        }
+        table.setItems(filteredItems);
     }
 }

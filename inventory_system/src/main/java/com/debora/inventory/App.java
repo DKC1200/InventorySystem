@@ -14,7 +14,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 1280, 720);
+        scene = new Scene(loadFXML("primary"), 700, 700);
 
         stage.setTitle("Inventory System");
         stage.setScene(scene);
@@ -34,4 +34,8 @@ public class App extends Application {
         launch();
     }
 
+    // Persistent data storage (SQLite or another database)
+    // Item categorization
+    // Data import/export (CSV or JSON)
+    // automatic color acording to quantity
 }
